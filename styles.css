@@ -44,6 +44,12 @@ img {
   height: auto;
 }
 
+i {
+  font-size: 20px;
+  color: #ff9800;
+  margin-right: 10px;
+}
+
 .btn {
   display: inline-block;
   padding: 10px 25px;
@@ -80,7 +86,7 @@ img {
 
 /* Header & Navigation */
 header {
-  background: transparent
+  background: transparent;
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -117,7 +123,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #e0e0e0;
+  color: #ff9800;
 }
 
 .mobile-menu-btn {
@@ -191,6 +197,27 @@ nav {
   background-color: white;
 }
 
+.about .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+}
+
+.about .nav-links a {
+  color: #121212;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9800;
+}
+
+.about .container {
+  margin: 90px auto;
+}
+
 .about-content {
   display: flex;
   flex-wrap: wrap;
@@ -216,14 +243,6 @@ nav {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
-}
-
-.info-item i {
-  margin-right: 15px;
-  color: #6e8efb;
-  font-size: 20px;
-  width: 24px;
-  text-align: center;
 }
 
 /* Skills Section */
