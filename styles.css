@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #f8f9fa;
+  background-color: #121212;
   color: #333;
   line-height: 1.5;
 }
@@ -97,6 +97,7 @@ header {
 
 nav {
   padding: 0;
+  background-color: black;
 }
 
 .nav-container {
@@ -137,8 +138,9 @@ nav {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #121212, #fff);
-  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.9)),
+    url("images/portfolio_background.png") no-repeat center left/cover;
+
   padding: 275px 0 250px;
   margin-top: -5px;
 }
@@ -147,10 +149,27 @@ nav {
   margin: -28px auto;
 }
 
+.hero .nav-links a {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
 .hero-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.contact-button {
+  color: white;
+  background: #ff9800;
+}
+
+.projects-button {
+  color: #ff9800;
+  background: #121212;
+  border: 2px solid #ff9800;
 }
 
 .hero-text {
@@ -169,11 +188,17 @@ nav {
 .hero h1 {
   font-size: 48px;
   line-height: 1.2;
+  color: white;
 }
 
 .hero h2 {
   font-size: 32px;
   opacity: 0.9;
+  color: white;
+}
+
+.hero p {
+  color: white;
 }
 
 .hero-buttons {
@@ -189,7 +214,7 @@ nav {
   border: 4px solid white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   object-fit: cover;
-  object-position: center top;
+  object-position: center left;
 }
 
 /* About Section */
@@ -261,7 +286,7 @@ nav {
   align-items: center;
 }
 
-.nav-links a {
+.skills .nav-links a {
   color: #121212;
   font-weight: 500;
   transition: color 0.3s;
@@ -353,6 +378,11 @@ nav {
 .fa-github {
   color: rgb(199, 48, 199);
 }
+
+.fa-python {
+  color: #3776ab; /* Python's official blue color */
+}
+
 .fa-laptop {
   color: silver;
 }
