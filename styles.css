@@ -218,6 +218,11 @@ nav {
   margin: 90px auto;
 }
 
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 45px;
+}
+
 .about-content {
   display: flex;
   flex-wrap: wrap;
@@ -233,7 +238,8 @@ nav {
 .about-info {
   flex: 1;
   min-width: 300px;
-  background-color: #f8f9fa;
+  background-color: #121212;
+  color: white;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
