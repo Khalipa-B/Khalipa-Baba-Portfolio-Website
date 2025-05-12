@@ -93,7 +93,6 @@ header {
 
 nav {
   padding: 0;
-  background: none;
 }
 
 .nav-container {
@@ -121,26 +120,29 @@ nav {
   border-radius: 50%;
 }
 
-.nav-links {
-  position: absolute;
-  top: -33px;
-  right: 180px;
-  display: flex;
-  gap: 40px;
-  margin: 10px;
-  border: 2px solid var(--primary-color);
-  border-radius: 25px;
-  padding: 10px 20px;
-}
-
 .nav-links a {
-  color: var(--primary-color);
-  font-weight: 500;
-  transition: color 0.3s;
+  position: relative;
+  text-decoration: none;
+  color: #121212;
+  font-size: 18px;
+  padding: 5px 0;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #ff9800;
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff9800, #121212);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  color: var(--accent-color);
 }
 
 .mobile-menu-btn {
@@ -163,6 +165,20 @@ nav {
 
 .hero .container {
   margin: -140px auto;
+}
+
+.hero nav {
+  background: none;
+}
+
+.hero .nav-links {
+  position: absolute;
+  top: -33px;
+  right: 135px;
+  display: flex;
+  gap: 40px;
+  margin: 10px;
+  padding: 10px 20px;
 }
 
 .hero .nav-links a {
@@ -273,6 +289,14 @@ nav {
   background-color: white;
 }
 
+.about .logo {
+  position: absolute;
+  top: 85px;
+  left: -20px;
+  margin: -100px;
+  width: 155px;
+}
+
 .about .nav-container {
   display: flex;
   justify-content: space-between;
@@ -285,8 +309,15 @@ nav {
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: #ff9800;
+.about .nav-links {
+  position: absolute;
+  top: 25px;
+  right: 325px;
+  display: flex;
+  gap: 40px;
+  margin: 10px;
+  padding: 10px 20px;
+  background: white;
 }
 
 .about .container {
