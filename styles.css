@@ -82,7 +82,7 @@ i {
 
 /* Header & Navigation */
 header {
-  background: transparent;
+  background: white;
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -96,6 +96,7 @@ nav {
 }
 
 .nav-container {
+  background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,6 +104,7 @@ nav {
 }
 
 .logo-container {
+  background: white;
   position: relative;
 }
 
@@ -121,6 +123,7 @@ nav {
 }
 
 .nav-links a {
+  background: white;
   position: relative;
   text-decoration: none;
   color: #121212;
@@ -291,25 +294,21 @@ nav {
 
 .about .logo {
   position: absolute;
-  top: 85px;
-  left: -20px;
-  margin: -100px;
-  width: 155px;
-}
-
-.about .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  top: -15px; /* Adjust the vertical position */
+  left: -113px; /* Adjust the horizontal position */
+  margin: 0; /* Remove unnecessary margin */
+  width: 150px; /* Adjust the logo size if needed */
 }
 
 .about .nav-links a {
   color: #121212;
   font-weight: 500;
   transition: color 0.3s;
+  background: white;
 }
 
 .about .nav-links {
+  background: white;
   position: absolute;
   top: 25px;
   right: 325px;
@@ -317,7 +316,6 @@ nav {
   gap: 40px;
   margin: 10px;
   padding: 10px 20px;
-  background: white;
 }
 
 .about .container {
@@ -325,8 +323,13 @@ nav {
 }
 
 .about h2 {
-  font-size: 36px;
+  font-size: 45px;
   margin-bottom: 45px;
+}
+
+.about h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
 }
 
 .about-content {
