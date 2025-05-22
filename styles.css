@@ -24,10 +24,10 @@ a {
 }
 
 .container {
-  width: 81%;
+  width: 75%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 60px 0px;
 }
 
 section {
@@ -98,7 +98,7 @@ nav {
 .nav-container {
   background: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: relative;
 }
@@ -117,13 +117,12 @@ nav {
 }
 
 .logo img {
-  width: 150px;
-  height: 150px;
+  width: 148px;
+  height: 143px;
   border-radius: 50%;
 }
 
 .nav-links a {
-  background: white;
   position: relative;
   text-decoration: none;
   color: #121212;
@@ -188,6 +187,10 @@ nav {
   color: var(--primary-color);
   font-weight: 500;
   transition: color 0.3s;
+  padding: 10px 0px;
+  margin-top: 25px;
+  margin-right: 20px;
+  font-size: 18px;
 }
 
 .hero-content {
@@ -292,6 +295,15 @@ nav {
   background-color: white;
 }
 
+.about .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 20px 0;
+  margin: 25px 170px;
+  background: white;
+}
 .about .logo {
   position: absolute;
   top: -15px; /* Adjust the vertical position */
@@ -304,14 +316,14 @@ nav {
   color: #121212;
   font-weight: 500;
   transition: color 0.3s;
-  background: white;
+  font-size: 18px;
+  padding: 5px 0;
 }
 
 .about .nav-links {
-  background: white;
   position: absolute;
   top: 25px;
-  right: 325px;
+  right: 280px;
   display: flex;
   gap: 40px;
   margin: 10px;
@@ -324,12 +336,15 @@ nav {
 
 .about h2 {
   font-size: 45px;
-  margin-bottom: 45px;
+  margin-bottom: 60px;
+  text-align: center;
+  margin-top: -25px;
+}
 }
 
 .about h3 {
   font-size: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .about-content {
@@ -352,6 +367,11 @@ nav {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.about-info h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .info-item {
