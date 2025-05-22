@@ -515,6 +515,23 @@ nav {
   background-color: white;
 }
 
+.projects .nav-links {
+  position: absolute;
+  top: 25px;
+  right: 280px;
+  display: flex;
+  gap: 40px;
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+.projects h2 {
+  font-size: 36px;
+  margin-bottom: 45px;
+  margin-top: 30px;
+  text-align: center;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -536,7 +553,7 @@ nav {
 }
 
 .project-image {
-  height: 200px;
+  height: 300px;
   background: linear-gradient(135deg, #6e8efb, #a777e3);
   display: flex;
   align-items: center;
