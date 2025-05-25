@@ -847,6 +847,30 @@ footer {
   .nav-container {
     justify-content: space-between; /* Adjust layout for mobile */
   }
+
+  .hero-content {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center-align text */
+  }
+
+  .hero h1 {
+    font-size: 32px; /* Reduce font size */
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto; /* Center the image */
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+  }
 }
 
 @media (max-width: 480px) {
