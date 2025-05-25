@@ -848,9 +848,15 @@ footer {
     justify-content: space-between; /* Adjust layout for mobile */
   }
 
+  .hero .container {
+    margin: -56px auto;
+  }
+
   .hero-content {
-    flex-direction: column; /* Stack content vertically */
+    background: #fff;
     text-align: center; /* Center-align text */
+    padding: 40px;
+    border-radius: 20px;
   }
 
   .hero h1 {
@@ -875,7 +881,8 @@ footer {
 
 @media (max-width: 480px) {
   .hero {
-    padding: 150px 0 80px;
+    padding: 170px 0 80px;
+    margin-top: -25px;
   }
 
   .hero h1 {
@@ -886,6 +893,38 @@ footer {
     font-size: 20px;
   }
 
+  .hero-content {
+    background: #fff;
+    text-align: center; /* Center-align text */
+    padding: 0 20px;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+
+  .hero-image {
+    min-width: 280px; /* Adjust image width for smaller screens */
+    display: flex;
+    justify-content: center;
+    margin: 0 auto; /* Center the image */
+  }
+
+  .hero-overlay {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+  }
+
+  .hero-text {
+    flex: 1;
+    min-width: 100%;
+    padding-right: 0;
+    margin-left: 0;
+  }
+
   .profile-img {
     width: 180px;
     height: 180px;
@@ -893,5 +932,83 @@ footer {
 
   .section-title {
     font-size: 28px;
+  }
+
+  .footer {
+    padding: 10px 0;
+  }
+  .footer-content {
+    flex-direction: column; /* Stack footer content vertically */
+    align-items: center; /* Center-align footer content */
+  }
+
+  .footer-info {
+    text-align: center; /* Center-align footer info */
+  }
+
+  .social-links {
+    justify-content: center; /* Center social links */
+  }
+
+  .footer-bottom {
+    text-align: center; /* Center-align footer bottom */
+  }
+
+  .footer-bottom p {
+    margin: 5px 0; /* Adjust margin for better spacing */
+  }
+
+  .footer-bottom .heart {
+    color: #ff6b6b; /* Heart color */
+  }
+
+  .footer-bottom .heart:hover {
+    color: #ff0000; /* Change heart color on hover */
+  }
+
+  .footer-bottom p a {
+    color: #ff9800; /* Link color */
+    text-decoration: none; /* Remove underline */
+  }
+
+  .footer-bottom p a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  .footer-bottom p a:visited {
+    color: #ff9800; /* Visited link color */
+  }
+
+  .footer-bottom p a:active {
+    color: #ff9800; /* Active link color */
+  }
+
+  .footer-bottom p a:focus {
+    outline: none; /* Remove focus outline */
+    color: #ff9800; /* Focus link color */
+  }
+
+  .footer-bottom p a:focus-visible {
+    outline: 2px solid #ff9800; /* Focus visible outline */
+    outline-offset: 2px; /* Offset for better visibility */
+  }
+
+  .footer-bottom p a:focus:not(:focus-visible) {
+    outline: none; /* Remove focus outline when not visible */
+  }
+
+  .footer-bottom p a:focus-visible:hover {
+    color: #ff9800; /* Maintain color on hover */
+  }
+
+  .footer-bottom p a:focus-visible:active {
+    color: #ff9800; /* Maintain color on active */
+  }
+
+  .footer-bottom p a:focus-visible:visited {
+    color: #ff9800; /* Maintain color on visited */
+  }
+
+  .footer-bottom p a:focus-visible:focus {
+    color: #ff9800; /* Maintain color on focus */
   }
 }
