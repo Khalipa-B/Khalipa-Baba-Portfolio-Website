@@ -644,13 +644,34 @@ nav {
 
 /* Contact Section */
 .contact {
-  background-color: #f8f9fa;
+  background: #fff;
+}
+
+.contact .nav-links {
+  position: absolute;
+  top: 25px;
+  right: 280px;
+  display: flex;
+  gap: 40px;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.contact .container {
+  margin: 90px auto;
 }
 
 .contact-content {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 45px;
+  text-align: center;
 }
 
 .contact-info {
