@@ -837,49 +837,15 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: none; /* Hide navigation links on smaller screens */
   }
 
   .mobile-menu-btn {
-    display: block;
+    display: block; /* Show the mobile menu button */
   }
 
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .hero h2 {
-    font-size: 24px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  section {
-    padding: 60px 0;
-  }
-
-  .profile-img {
-    width: 200px;
-    height: 200px;
-    margin-top: 30px;
-  }
-
-  .hero-text,
-  .hero-image {
-    flex: 100%;
-    text-align: center;
-    padding-right: 0;
-  }
-
-  .hero-buttons {
-    justify-content: center;
+  .nav-container {
+    justify-content: space-between; /* Adjust layout for mobile */
   }
 }
 
