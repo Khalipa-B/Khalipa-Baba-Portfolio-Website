@@ -123,10 +123,11 @@ nav ul {
   width: 155px;
 }
 
+
 .logo img {
-  width: 148px;
-  height: 143px;
-  border-radius: 50%;
+  width: 150px; /* default desktop size */
+  height: auto;
+  display: block;
 }
 
 .nav-links a {
@@ -977,6 +978,11 @@ textarea.form-control {
     align-items: center;
   }
 
+  /* Hide logo image on mobile and center the mobile toggle */
+  .logo img {
+    display: none;
+  }
+
   .mobile-menu-btn {
     display: block;
     font-size: 24px;
@@ -985,14 +991,19 @@ textarea.form-control {
     cursor: pointer;
     color: #121212;
     z-index: 1100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  .nav-container {
-    padding: 15px 0;
+   .nav-container {
+    align-items: center; /* vertically center logo and button */
+    justify-content: space-between;
   }
 
   .hero .container {
-    margin: -56px auto;
+    margin: 20px auto;
   }
 
   .hero-content {
@@ -1020,9 +1031,19 @@ textarea.form-control {
     flex-direction: column; /* Stack buttons vertically */
     gap: 10px;
   }
+
+  .logo img {
+    width: 120px; /* smaller for mobile screens */
+  }
+
+ 
 }
 
 @media (max-width: 480px) {
+    .logo img {
+    width: 100px; /* adjust as needed for tiny screens */
+  }
+
   .hero {
     padding: 170px 0 80px;
     margin-top: -25px;
@@ -1166,4 +1187,31 @@ textarea.form-control {
     justify-content: center;
   }
 }
+
+/* Mobile adjustments for Projects cards */
+@media (max-width: 768px) {
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skill-card {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+
+  .skill-list p {
+    font-size: 15px;
+    margin: 0;
+    color: #ff9800;
+  }
+
+  #projects .skill-list a {
+    display: block;
+    margin-top: 6px;
+  }
+}
+
 }
