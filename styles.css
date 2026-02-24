@@ -35,6 +35,11 @@ section {
   padding: 80px 0;
 }
 
+/* Desktop section title spacing (avoid overlap with fixed header) */
+.section-title {
+  margin-top: 30px;
+}
+
 h1,
 h2,
 h3,
@@ -374,6 +379,10 @@ nav ul {
   margin-bottom: 20px;
 }
 
+#about .section-title {
+  margin-top: 30px;
+}
+
 .info-item {
   display: flex;
   align-items: center;
@@ -491,6 +500,9 @@ nav ul {
   color: #ff9800;
 }
 
+#skills .section-title {
+  margin-top: 30px;
+}
 
 .fa-react {
   color: #61dafb;
@@ -570,6 +582,10 @@ nav ul {
 
 #projects .skills-grid {
   gap: 30px;
+}
+
+#projects .section-title {
+  margin-top: 30px;
 }
 
 .projects .nav-links {
@@ -773,6 +789,10 @@ nav ul {
   margin-bottom: 8px;
 }
 
+#contact .section-title {
+  margin-top: 30px;
+}
+
 /* ===============================
    CONTACT FORM - PREMIUM DARK
 ================================= */
@@ -967,6 +987,15 @@ textarea.form-control {
     font-size: 20px;
   }
 
+  /* Slightly lower section titles on mobile to avoid overlap with fixed header */
+  .section-title {
+    margin-top: 20px;
+  }
+
+  #contact .section-title {
+    margin-top: 80px;
+  }
+
   p {
     font-size: 14px;
   }
@@ -1094,8 +1123,49 @@ textarea.form-control {
     height: 180px;
   }
 
+  /* Contact form mobile adjustments */
+  .contact-form {
+    width: 90%;
+    min-width: auto;
+    max-width: 700px;
+    padding: 24px;
+    margin: 20px 20px 20px 16px;
+  }
+
+  .contact-form .form-control,
+  .contact-form textarea.form-control {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .contact-form .submit-btn {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  /* Center contact section on mobile */
+  .contact .container {
+    margin: 20px auto;
+    padding: 0 16px;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
   .section-title {
     font-size: 28px;
+  }
+
+  /* Lower the Projects title slightly on very small screens */
+  .section-title {
+    margin-top: 18px;
+  }
+
+  #contact .section-title {
+    margin-top: 80px;
   }
 
   .footer {
