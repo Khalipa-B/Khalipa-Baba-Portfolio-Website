@@ -1,13 +1,4 @@
-const sections = ["about", "skills", "projects", "contact"];
 
-sections.forEach((section) => {
-  fetch(`${section}.html`)
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById(section).innerHTML = data;
-    })
-    .catch((error) => console.error(`Error loading ${section}:`, error));
-});
 
 // Mobile menu toggle
 const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
