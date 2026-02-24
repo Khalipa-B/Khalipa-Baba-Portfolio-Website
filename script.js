@@ -8,6 +8,13 @@ mobileMenuBtn.addEventListener("click", () => {
   navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
 });
 
+const menuBtn = document.getElementById("mobile-menu-btn");
+const navLinks = document.getElementById("nav-links");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
 // Form submission
 const contactForm = document.getElementById("contactForm");
 
