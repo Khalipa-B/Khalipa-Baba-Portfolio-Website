@@ -396,10 +396,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  padding: 20px 0;
+  margin: 25px 170px;
+  background: white;
 }
 
 .skills .nav-links {
-  position: absolute;
+ position: absolute;
   top: 25px;
   right: 280px;
   display: flex;
@@ -409,9 +413,11 @@ nav {
 }
 
 .skills .nav-links a {
-  color: #121212;
+   color: #121212;
   font-weight: 500;
   transition: color 0.3s;
+  font-size: 18px;
+  padding: 5px 0;
 }
 
 .skills h2 {
