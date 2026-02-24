@@ -11,11 +11,13 @@ mobileMenuBtn.addEventListener("click", () => {
 // Form submission
 const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Thank you for your message! I will get back to you soon.");
-  this.reset();
-});
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Thank you for your message! I will get back to you soon.");
+    this.reset();
+  });
+}
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

@@ -5,6 +5,7 @@
   --text-color: #333;
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -101,6 +102,12 @@ nav {
   justify-content: space-around;
   align-items: center;
   position: relative;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
 }
 
 .logo-container {
@@ -596,6 +603,12 @@ nav {
   text-align: center;
 }
 
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -903,6 +916,37 @@ textarea.form-control {
     display: none; /* Hide navigation links on smaller screens */
   }
 
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content,
+  .skills-container,
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
   .mobile-menu-btn {
     display: block; /* Show the mobile menu button */
   }
@@ -1074,4 +1118,16 @@ textarea.form-control {
   .footer-bottom p a:focus-visible:focus {
     color: #ff9800; /* Maintain color on focus */
   }
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
 }
