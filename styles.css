@@ -154,6 +154,14 @@ nav ul {
   color: var(--accent-color);
 }
 
+/* Desktop nav layout */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+}
+
 .mobile-menu-btn {
   display: none;
   background: none;
@@ -173,7 +181,7 @@ nav ul {
 }
 
 .hero .container {
-  margin: -140px auto;
+  margin: 5px auto;
 }
 
 .hero .logo {
@@ -184,29 +192,6 @@ nav ul {
   width: 155px;
 }
 
-.hero nav {
-  background: none;
-}
-
-.hero .nav-links {
-  position: absolute;
-  top: -18px;
-  right: 18px;
-  display: flex;
-  gap: 40px;
-  margin: 10px;
-  padding: 10px 20px;
-}
-
-.hero .nav-links a {
-  color: var(--primary-color);
-  font-weight: 500;
-  transition: color 0.3s;
-  padding: 10px 0px;
-  margin-top: 25px;
-  margin-right: 20px;
-  font-size: 18px;
-}
 
 .hero-content {
   display: flex;
@@ -729,7 +714,7 @@ nav ul {
 }
 
 .contact .container {
-  margin: 90px auto;
+  margin: 80px auto;
 }
 
 .contact-content {
@@ -787,61 +772,91 @@ nav ul {
   margin-bottom: 8px;
 }
 
+/* ===============================
+   CONTACT FORM - PREMIUM DARK
+================================= */
+
 .contact-form {
-  flex: 1;
-  min-width: 300px;
-  background-color: var(--primary-color);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  color: #fff;
+  background: #0e0e0e;
+  padding: 60px;
+  border-radius: 20px;
+  
+  width: 40%;
+  min-width: 420px;        /* Prevents it from becoming too small */
+  max-width: 650px;        /* Prevents it from becoming too wide */
+
+  margin: 80px auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form form {
+  width: 100%;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-weight: 500;
+  color: #ffffff;
+  font-size: 15px;
 }
 
 .form-control {
   width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  background: #1a1a1a;
+  color: #ffffff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: #888;
 }
 
 .form-control:focus {
-  border-color: var(--accent-color);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(110, 142, 251, 0.2);
+  border-color: #ff9900;
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.2);
 }
 
 textarea.form-control {
-  min-height: 150px;
+  min-height: 120px;
   resize: vertical;
 }
 
+/* ===============================
+   SUBMIT BUTTON
+================================= */
+
 .submit-btn {
   width: 100%;
-  padding: 15px;
-  background: var(--accent-color);
-  color: white;
+  padding: 18px;
   border: none;
   border-radius: 50px;
+  background: #ff9900;
+  color: #ffffff;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
-  opacity: 0.9;
+  background: #e68a00;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 153, 0, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
 }
 
 /* Footer */
@@ -913,18 +928,36 @@ textarea.form-control {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Hide navigation links on smaller screens */
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 75%;
+    height: calc(100vh - 70px);
+    background: #111;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    display: flex;
   }
 
-@media (max-width: 768px) {
+  .nav-links a {
+    color: white;
+    font-size: 18px;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
   nav ul {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
-}
 
-@media (max-width: 768px) {
   h1 {
     font-size: 24px;
   }
@@ -936,23 +969,26 @@ textarea.form-control {
   p {
     font-size: 14px;
   }
-}
 
-@media (max-width: 768px) {
   .about-content,
   .skills-container,
   .projects-container {
     flex-direction: column;
     align-items: center;
   }
-}
 
   .mobile-menu-btn {
-    display: block; /* Show the mobile menu button */
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #121212;
+    z-index: 1100;
   }
 
   .nav-container {
-    justify-content: space-between; /* Adjust layout for mobile */
+    padding: 15px 0;
   }
 
   .hero .container {

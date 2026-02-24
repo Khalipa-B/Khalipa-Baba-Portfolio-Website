@@ -1,23 +1,20 @@
-
-
 // Mobile menu toggle
-const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-const navLinks = document.querySelector(".nav-links");
-
-mobileMenuBtn.addEventListener("click", () => {
-  navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
+document.querySelectorAll(".mobile-menu-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const navLinks = btn.parentElement.querySelector(".nav-links");
+    navLinks.classList.toggle("active");
+  });
 });
 
-const menuBtn = document.getElementById("mobile-menu-btn");
-const navLinks = document.getElementById("nav-links");
-
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+// Close mobile menu when clicking a link
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    link.closest(".nav-links").classList.remove("active");
+  });
 });
 
 // Form submission
 const contactForm = document.getElementById("contactForm");
-
 if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -26,34 +23,25 @@ if (contactForm) {
   });
 }
 
-// Smooth scrolling for navigation links
+// Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
-
-    const targetId = this.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
-
-    if (targetElement) {
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
       window.scrollTo({
-        top: targetElement.offsetTop - 80,
+        top: target.offsetTop - 80,
         behavior: "smooth",
       });
-
-      // Close mobile menu if open
-      if (navLinks.style.display === "flex") {
-        navLinks.style.display = "none";
-      }
     }
   });
 });
 
-// Add shadow to header on scroll
+// Header shadow on scroll
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
-  if (window.scrollY > 50) {
-    header.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.1)";
-  } else {
-    header.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
-  }
+  header.style.boxShadow =
+    window.scrollY > 50
+      ? "0 4px 10px rgba(0,0,0,0.1)"
+      : "0 4px 6px rgba(0,0,0,0.1)";
 });

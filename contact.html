@@ -31,27 +31,27 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="contact container nav-container">
-          <div class="logo">
-            <a href="index.html">
-              <img src="images/kb-logo.png" alt="Khalipa Baba Logo" />
-            </a>
-          </div>
-          <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-          </div>
-          <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-          </button>
-        </div>
-      </nav>
-    </header>
+   <header class="header">
+  <div class="container nav-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/kb-logo.png" alt="Khalipa Baba Logo" />
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <button class="mobile-menu-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
     <!-- Contact Section -->
     <section class="contact" id="contact">
       <div class="container">
@@ -107,26 +107,34 @@
           </div>
 
           <div class="contact-form">
-            <form id="contactForm">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" class="form-control" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" class="form-control" required />
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" class="form-control" required />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" class="form-control" required></textarea>
-              </div>
-              <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-          </div>
+  <form action="https://formspree.io/f/mlgwabeq" method="POST">
+    
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Subject</label>
+      <input type="text" name="subject" required>
+    </div>
+
+    <div class="form-group">
+      <label>Message</label>
+      <textarea name="message" required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">
+      Send Message
+    </button>
+
+  </form>
+</div>
         </div>
       </div>
     </section>
